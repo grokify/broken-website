@@ -1,6 +1,6 @@
 {
-    "name": "Heroku Demo App",
-    "description": "Heroku Demo App",
+    "name": "Broken Website Test App",
+    "description": "Broken Website Test App",
     "repository": "https://github.com/grokify/broken-website",
     "logo": "https://raw.githubusercontent.com/grokify/broken-website/master/public/tree.png",
     "website": "https://github.com/grokify",

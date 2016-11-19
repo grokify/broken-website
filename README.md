@@ -5,12 +5,16 @@ This is an example broken website to use for testing purposes.
 
 It currently generates the following conditions:
 
-* High latency web pages
+* High latency / low Apdex web pages
 * Error web pages
+
+It currently includes built-in New Relic Browser monitoring support.
 
 ## Installation
 
 ### Heroku Installation
+
+Retrieve your New Relic application ID and license key. For Browser apps, this can be located at the end of the embedded JavaScript.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 

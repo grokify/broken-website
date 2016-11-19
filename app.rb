@@ -21,7 +21,7 @@ end
 get '/latency' do
   sleep_max = 20
   sleep_links = []
-  1.upto(sleep_max) do |seconds|
+  0.upto(sleep_max) do |seconds|
     sleep_links << %Q{<a href="/latency?latency_time=#{seconds}">#{seconds}</a>}
   end
 
