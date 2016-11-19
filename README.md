@@ -10,11 +10,15 @@ It currently generates the following conditions:
 
 It currently includes built-in New Relic Browser monitoring support.
 
+## Prerequisites
+
+## New Relic
+
+This app supports New Relic Browser monitoring. In order to test this with a New Relic Browser app, you need to have your New Relic application ID and license key. For Browser apps, this can be located at the end of the embedded JavaScript. It's important to note you should not use the license key in the `Account Settings` page but should use the one in the JavaScript provided when configuring your app as they are different.
+
 ## Installation
 
 ### Heroku Installation
-
-Retrieve your New Relic application ID and license key. For Browser apps, this can be located at the end of the embedded JavaScript.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
