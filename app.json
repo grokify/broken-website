@@ -1,0 +1,28 @@
+{
+    "name": "Heroku Demo App",
+    "description": "Heroku Demo App",
+    "repository": "https://github.com/grokify/broken-website",
+    "logo": "https://raw.githubusercontent.com/grokify/broken-website/master/public/tree.png",
+    "website": "https://github.com/grokify",
+    "addons": [
+        "papertrail:choklad"
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "Free"
+        }
+    },
+    "env": {
+        "NEWRELIC_APP_ID": {
+            "description": "New Relic application id",
+            "value": "",
+            "required": false
+        },
+        "NEWRELIC_LICENSE_KEY": {
+            "description": "New Relic license key",
+            "value": "",
+            "required": false
+        }
+    }
+}
