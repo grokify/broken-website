@@ -10,11 +10,11 @@ It currently generates the following conditions:
 
 ## Installation
 
-### Heroku
+### Heroku Installation
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### Usage
+### Local Installation
 
 ```bash
 $ git clone https://github.com/grokify/broken-website
