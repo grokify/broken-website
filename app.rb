@@ -37,23 +37,9 @@ get '/latency' do
     }
   end
 
-  body %Q{
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <script src="./newrelic.js"></script>
-    </head>
-    <body>
-      #{header_html}
-      <hr>
-      <p>Generate Latency</p>
-      <div>
-        #{sleep_links_html}
-      </div>
-      <hr>
-      <p><a href="/">Home</a> | <a href="/latency">Latency</a> | <a href="/error">Error</a></p>
-    </body></html>
-  }
+  erb :latency, locals: {
+    header_html: header_html,
+    links_html: sleep_links_html}
 end
 
 
@@ -75,21 +61,7 @@ get '/error' do
     }
   end
 
-  body %Q{
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <script src="./newrelic.js"></script>
-    </head>
-    <body>
-      #{header_html}
-      <hr>
-      <p>Generate Error</p>
-      <div>
-        #{errors_links_html}
-      </div>
-      <hr>
-      <p><a href="/">Home</a> | <a href="/latency">Latency</a> | <a href="/error">Error</a></p>
-    </body></html>
-  }
+  erb :error, locals: {
+    header_html: header_html,
+    links_html: errors_links_html}
 end
