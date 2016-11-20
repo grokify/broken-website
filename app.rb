@@ -32,8 +32,7 @@ get '/latency' do
     sleep sleep_time
     header_html = %Q{
       <h1>Latency Generator: #{sleep_time} seconds</h1>
-      <p>This is an example #{sleep_time} second latency response.</p>
-    }
+      <p>This is an example #{sleep_time} second latency response.</p>}
   end
 
   erb :latency, locals: {
@@ -55,8 +54,7 @@ get '/error' do
     status error_status
     header_html = %Q{
       <h1>Error Generator: #{error_status}</h1>
-      <p>This is an example #{error_status} error.</p>
-    }
+      <p>This is an example #{error_status} error.</p>}
   end
 
   erb :error, locals: {
