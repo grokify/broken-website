@@ -59,3 +59,7 @@ The Time calculation will change based on your own app's T setting. In the follo
 Apdex
 
 * https://en.wikipedia.org/wiki/Apdex
+
+New Relic Alert Policy API docs
+
+* https://docs.newrelic.com/docs/alerts/alert-policies/rest-api-alert-policies/maintain-apps-servers-alert-policies-v2
