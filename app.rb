@@ -24,10 +24,9 @@ get '/latency' do
   0.upto(sleep_max) do |seconds|
     sleep_links << %Q{<a href="/latency?latency_time=#{seconds}">#{seconds}</a>}
   end
-
   sleep_links_html = sleep_links.join(' ')
-  header_html = '<h1>Latency Generator</h1>'
 
+  header_html = '<h1>Latency Generator</h1>'
   sleep_time = params[:latency_time].to_i
   if sleep_time >= 1 && sleep_time <= sleep_max
     sleep sleep_time
@@ -51,8 +50,8 @@ get '/error' do
     error_links << %Q{<a href="/error?error_status=#{code}">#{code}</a>}
   end
   errors_links_html = error_links.join(' ')
-  header_html = '<h1>Error Generator</h1>'
 
+  header_html = '<h1>Error Generator</h1>'
   if error_status >= 400 && error_status < 600
     status error_status
     header_html = %Q{
