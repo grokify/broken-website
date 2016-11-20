@@ -14,13 +14,13 @@
         }
     },
     "env": {
-        "NEWRELIC_APP_ID": {
-            "description": "New Relic application id",
+        "NEWRELIC_LICENSE_KEY": {
+            "description": "New Relic license key",
             "value": "",
             "required": false
         },
-        "NEWRELIC_LICENSE_KEY": {
-            "description": "New Relic license key",
+        "NEWRELIC_APP_ID": {
+            "description": "New Relic application id",
             "value": "",
             "required": false
         }

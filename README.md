@@ -34,7 +34,7 @@ To test New Relic alerts, you can use the latency generator with the Apdex T val
 $ git clone https://github.com/grokify/broken-website
 $ cd broken-website
 $ bundle
-$ NEWRELIC_APP_ID=<MY_APP_ID> NEWRELIC_LICENSE_KEY=<MY_LICENSE_KEY> ruby app.rb
+$ NEWRELIC_LICENSE_KEY=<MY_LICENSE_KEY> NEWRELIC_APP_ID=<MY_APP_ID> ruby app.rb
 ```
 
 ## Latency Testing
