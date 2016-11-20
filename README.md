@@ -14,7 +14,13 @@ It currently includes built-in New Relic Browser monitoring support.
 
 ## New Relic
 
-This app supports New Relic Browser monitoring. In order to test this with a New Relic Browser app, you need to have your New Relic application ID and license key. For Browser apps, this can be located at the end of the embedded JavaScript. It's important to note you should not use the license key in the `Account Settings` page but should use the one in the JavaScript provided when configuring your app as they are different.
+### App Id and License Key
+
+To use this app with New Relic, you need to configure it with your New Relic Browser `licenseKey` and `applicationId`. These two values can be retrieved from the JavaScript in `Application settings` > `Settings`. You should not use the license key in the `Account Settings` page as it is different than the one provided in the embeddable JavaScript.
+
+### Apdex T-value
+
+To test New Relic alerts, you can use the latency generator with the Apdex T value setting in New Relic. This is set in `Settings` > `Application Settings`
 
 ## Installation
 
@@ -47,14 +53,6 @@ The Time calculation will change based on your own app's T setting. In the follo
 | Satisfied | T or less | <= 1.2 seconds |
 | Tolerated | >T, <= 4T | Between 1.2 and 4.8 seconds |
 | Frustrated | > 4T | Greater than 4.8 seconds |
-
-### New Relic
-
-To use this app with New Relic, you need to configure it with your New Relic Browser `licenseKey` and `applicationId`. These two values can be retrieved from the JavaScript in `Application settings` > `Settings`.
-
-To test New Relic alerts, you can use the latency generator with the Apdex T value setting in New Relic.
-
-This is set in `Settings` > `Application Settings`
 
 ## Links
 
