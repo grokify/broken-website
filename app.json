@@ -28,8 +28,6 @@
             "description": "New Relic Browser app tier [pro, lite]",
             "value": "pro",
             "required": false
-        },
-
-
+        }
     }
 }
