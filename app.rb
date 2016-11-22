@@ -6,6 +6,10 @@ set :public_folder, 'public'
 
 newrelic_app_id = ENV['NEWRELIC_APP_ID']
 newrelic_license_key = ENV['NEWRELIC_LICENSE_KEY']
+newrelic_browser_tier = ENV['NEWRELIC_BROWSER_TIER'].to_sym.downcase
+newrelic_browser_tier = :lite unless newrelic_browser_tier == :pro
+
+puts "TIER #{newrelic_browser_tier}"
 
 get '/' do
   send_file File.join(settings.public_folder, 'index.html')
@@ -13,9 +17,12 @@ end
 
 get '/newrelic.js' do
   content_type 'application/javascript'
-  erb :newrelicjs, locals: {
+  locals = {
     newrelic_license_key: newrelic_license_key,
     newrelic_app_id: newrelic_app_id}
+  newrelic_browser_tier == :pro \
+    ? erb(:newrelic_pro_js, locals: locals)
+    : erb(:newrelic_lite_js, locals: locals)
 end
 
 get '/latency' do

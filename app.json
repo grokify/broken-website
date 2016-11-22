@@ -23,6 +23,13 @@
             "description": "New Relic application id",
             "value": "",
             "required": false
-        }
+        },
+        "NEWRELIC_BROWSER_TIER": {
+            "description": "New Relic Browser app tier [pro, lite]",
+            "value": "pro",
+            "required": false
+        },
+
+
     }
 }

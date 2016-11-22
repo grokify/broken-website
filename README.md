@@ -18,6 +18,10 @@ It currently includes built-in New Relic Browser monitoring support.
 
 To use this app with New Relic, you need to configure it with your New Relic Browser app `licenseKey` and `applicationId`. These two values can be retrieved from the JavaScript in `Application settings` > `Settings`. You should not use the license key in the `Account Settings` page as it is different than the one provided in the embeddable JavaScript.
 
+### App Tier
+
+Choose the New Relic Browser app tier you wish to use. This is under `Applications settings` > `Settings` where you select the JavaScript you wish to use. Setting the `NEWRELIC_BROWSER_TIER` environment variable to either `pro` or `tier` will select the right JavaScript to load. The `lite` tier is used by default.
+
 ### Apdex T-value
 
 To test New Relic alerts, you can use the latency generator with the Apdex T value setting in New Relic. You can set this to a low value for testing, e.g. 1 second, and then generate requests >= 5 seconds to trigger test alerts. This is set in `Settings` > `Application Settings`.
@@ -36,6 +40,8 @@ $ cd broken-website
 $ bundle
 $ NEWRELIC_LICENSE_KEY=<MY_LICENSE_KEY> NEWRELIC_APP_ID=<MY_APP_ID> ruby app.rb
 ```
+
+To use the `pro` tier, add the `NEWRELIC_BROWSER_TIER` environment variable.
 
 ## Latency Testing
 
